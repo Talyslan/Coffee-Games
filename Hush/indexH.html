@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../painel_superior.css"/>
+  <link rel="stylesheet" href="styleH.css">
+  <link rel="icon" href="../1.Imagens_Principais/favicon.ico" />
+  <title>Jogo da Velha</title>
+</head>
+
+<body>
+  <!-- PAINEL SUPERIOR -->
+  <header>
+    <nav>
+      <div class="headerEsquerda">
+        <a href="../index.html">Coffee<br>Games</a>
+      </div>
+      <div class="headerDireita">
+        <a href="../index.html#jogos">Jogos</a>
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="content">
+
+      <div class="inicio sumir">
+        <p>Escolha para começar</p>
+        <div class="botoes">
+          <button onClick="playMaquina()">Jogar contra a máquina <br> (Em andamento)</button>
+          <button onClick="multiplayer()">2 Players</button>
+        </div>
+      </div>
+
+      <div class="jogar-contra-maquina sumir">
+        <button onclick="voltarMaquina()">Voltar</button>
+        
+        <label for="player">
+          <p>Digite seu nome</p>
+        </label>
+        
+        <input id="player" type="text" placeholder="Player">
+
+        <button onclick="jogar()">Jogar</button>
+      </div>
+
+      <div class="multiplayer sumir">
+        <button onclick="voltarMultiplayer()">Voltar</button>
+
+        <div class="lado-lado">
+          <div class="label-multiplayer">
+            <label for="player1">
+              <p>Player 1</p>
+            </label>
+            
+            <input id="player1" type="text" placeholder="Player 1">
+          </div>
+          
+          <div class="label-multiplayer">
+            <label for="player2">
+              <p>Player 2</p>
+            </label>
+            
+            <input id="player2" type="text" placeholder="Player 2">
+          </div>
+        </div>
+
+        <button onclick="jogar()">Jogar</button>
+      </div>
+
+      <div class="jogadores sumir">
+        <span class="toAtivo fundoOriginal">Bot1 - X</span>
+        <span class="toAtivo fundoOriginal">Bot2 - O</span>
+      </div>
+
+      <div class="botao-para-comecar">
+        <button onclick="botao_para_comecar()">Para iniciar o jogo <br> Clique em mim</button>
+      </div>
+      
+      <div class="quadradao sumir">
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+         <div class="casaQuadradinho"></div>
+      </div>
+
+      <div class="mensagem sumir">
+        <p class="nomeDoVencedor">Bot Venceu</p>
+        <button onclick="reiniciar()">Reiniciar</button>
+        <button onclick="voltarFIM()">Voltar</button>
+      </div>
+      
+    </div>
+  </main>
+  
+  <!--Rodapé-->
+  <footer>
+    <p>
+      Created by <br> Matheus Ferreira <br> Talyslan Canabarro <br> Rafael Luiz
+    <p>© All rights reserved, 2023</p>
+  </footer>
+
+  <script src="scriptH.js"></script>
+</body>
+
+</html>
+
+

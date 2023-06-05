@@ -1,0 +1,262 @@
+body {
+  background-color: #F3EFEF;
+  color: #ffff;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images/casadavelha.png");
+  height: 100vh;
+}
+
+header nav {
+  background: rgb(61, 17, 50);
+}
+
+.sumir {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+button {
+  border: inset;
+  text-decoration: none;
+  color: white;
+  background: #1f3257;
+  padding: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  color: white;
+  background: #1c192c;
+}
+
+p {
+  font-size: 50px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 220px;
+}
+
+/*estilizando a grid*/
+.quadradao {
+  background: rgb(61, 17, 50);
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto);
+  padding: 18px;
+  border-radius: 30px;
+  margin-bottom: 35px;
+}
+
+/*estilizando as células*/
+.casaQuadradinho {
+  width: 150px;
+  height: 150px;
+  border: 5px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/*tirando as bordas para ficar igual o jogo da velha */
+.casaQuadradinho:nth-child(n - 3) {
+  border-top: none;
+}
+
+.casaQuadradinho:nth-child(1),
+.casaQuadradinho:nth-child(4),
+.casaQuadradinho:nth-child(7) {
+  border-left: none;
+}
+
+.casaQuadradinho:nth-child(n + 7) {
+  border-bottom: none;
+}
+
+.casaQuadradinho:nth-child(3),
+.casaQuadradinho:nth-child(6),
+.casaQuadradinho:nth-child(9) {
+  border-right: none;
+}
+
+/*X e suas perninhas*/
+.x::before,
+.x::after {
+  content: "";
+  height: calc(100px * 0.15);
+  width: calc(100px * 0.9);
+  background: white;
+  position: absolute;
+}
+
+.x::before {
+  transform: rotate(45deg);
+}
+
+.x::after {
+  transform: rotate(-45deg);
+}
+
+/*circulo agora*/
+.circulo::after {
+  content: "";
+  height: calc(100px * 0.9);
+  width: calc(100px * 0.9);
+  border-radius: 100%;
+  background: white;
+  position: absolute;
+}
+
+.circulo,
+.x {
+  cursor: not-allowed;
+}
+
+/*MENSAGENS DE INICIO E FINAL*/
+main .content {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .content .inicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 90px;
+  padding: 20px;
+}
+
+main .content .inicio .botoes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 20px;
+}
+
+main .content .mensagem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+main .content .jogar-contra-maquina {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px
+}
+
+main .content .jogar-contra-maquina button,
+main .content .multiplayer button {
+  margin-top: 150px;
+}
+
+input {
+  border: none;
+  height: 35px;
+  border-radius: 8px;
+  max-width: 90%;
+  padding-left: 15px;
+}
+
+input:hover {
+  color: white;
+  background: rgba(28, 25, 44, 0.8);
+}
+
+main .content .jogar-contra-maquina input,
+main .content .multiplayer input {
+  border: none;
+  border-radius: 10px;
+}
+
+main .content .multiplayer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px
+}
+
+main .content .multiplayer .lado-lado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 70px;
+}
+
+main .content .multiplayer .lado-lado .label-multiplayer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+main .content .mensagem,
+main .content .inicio,
+main .content .jogar-contra-maquina,
+main .content .multiplayer {
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  z-index: 1;
+  /*cobrir toda a página*/
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/*jogadores */
+main .content .jogadores {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+  width: 50%;
+}
+
+main .content .jogadores span {
+  padding: 25px;
+  border-radius: 5px;
+}
+
+.botao-para-comecar {
+  padding: 20px;
+}
+
+.botoes>button,
+.botao-para-comecar>button {
+  line-height: 40px;
+}
+
+.toAtivo {
+  background: #cd23a2;
+}
+
+/*como ".fundoOriginal" vem por último, ele cobre o ".toAtivo"*/
+.fundoOriginal {
+  background: #3d1132;
+}

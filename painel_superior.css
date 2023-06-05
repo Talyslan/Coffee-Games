@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  padding: 0px;
+  margin: 0px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', cursive;
+}
+
+:root {
+  --roxoHome: #68528a;
+  --brancoHome: #d4d4d4;
+  --roxo: #a47bb7;
+  --branco: #d4d4d4;
+  --azul: #8bb4df;
+  --roxin: #513870;
+  --brancao: white;
+  --cinza: #2b273d;
+  --backroxo: #150a1a;
+}
+
+/* CABEÇALHO */
+header nav {
+  z-index: 1;
+  position: fixed;
+  backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+header nav .headerEsquerda a,
+header nav .headerDireita a {
+  text-decoration: none;
+  color: white;
+  line-height: 20px;
+  padding: 10px;
+}
+
+header nav .headerDireita,
+header nav .headerEsquerda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header nav .headerEsquerda a {
+  font-size: 30px;
+  text-align: center;
+}
+
+header nav .headerDireita a {
+  height: 100%;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+
+
+header nav .headerDireita a,
+header nav .headerEsquerda a {
+  transition: 0.2s ease;
+}
+
+header nav .headerDireita a:hover,
+header nav .headerEsquerda a:hover {
+  color: var(--azul);
+}
+
+
+/* Configurações do rodapé */
+footer {
+  flex-shrink: 0;
+  /*deixa ele no final da pagina sempre*/
+  color: var(--roxoHome);
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20%;
+}
+
+footer p {
+  margin: 10px;
+  padding: 5px;
+  text-align: center;
+  color: var(--brancoHome);
+  line-height: 1.5;
+  font-size: 10px;
+}
+
+@media screen and (max-width: 830px) {
+  header nav {
+    justify-content: center;
+  }
+  
+  header nav .headerDireita {
+    display: none;
+  }
+}

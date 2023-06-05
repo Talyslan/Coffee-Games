@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link href="styleHG.css" rel="stylesheet" />
+  <link rel="stylesheet" href="../painel_superior.css" />
+  <link rel="icon" href="../1.Imagens_Principais/favicon.ico" />
+  <title>Hangman Game</title>
+</head>
+
+<body>
+  <!-- PAINEL SUPERIOR -->
+  <header>
+    <nav>
+      <div class="headerEsquerda">
+        <a href="../index.html">Coffee<br>Games</a>
+      </div>
+      <div class="headerDireita">
+        <a href="../index.html#jogos">Jogos</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content">
+      
+       <!-- Balões Iniciais -->
+      <div class="balao-background">
+
+        <div class="first">
+          <div class="balao-info">
+            <div class="cabeca">
+              <h1>Hangman Game</h1>
+              <p>
+                O Hangman Game é o, popularmente conhecido, jogo da forca. Esse código foi (e está sendo) desenvolvido 
+              </p>
+            </div>
+          
+            <div class="regras">
+              <h2>Regras</h2>
+              <ul>
+                <li>
+                  <p>Digite letras e se a letra existir na palavra, ela aparecerá na ordem</p>
+                </li>
+              
+                <li>
+                  <p>Digite a palavra inteira se souber</p>
+                </li>
+              </ul>
+            </div>
+            
+            <button id="iniciar" onClick="iniciar()">Começar</button>
+          </div> <!-- Fim do balao-info-->
+        </div> <!-- Fim do first -->
+        
+        <div class="second sumir">
+          <div class="cabeca">
+            <h1>Hangman Game</h1>
+            <p>Escolha a categoria</p>
+          </div>
+            <!-- Botao das categorias -->
+            <div class="categorias">
+              <button onClick="frutas()" > Frutas </button>
+              <button onClick="cores()"> Cores </button>
+              <button onClick="animais()"> Animais </button>
+            </div>
+          </div> <!-- fim do second -->
+
+        <div class="third sumir">
+          <div class="balao-jogo">
+            <div class="botoes">
+              <button onClick="mudarCategoria()" id="mudarCategoria">
+                Mudar categoria
+              </button>
+              
+              <button onClick="escolherTrocar()" id="escolherTrocar">
+                Trocar Palavra
+              </button>
+            </div>
+            
+            <!-- Botão de chutar -->
+            <div class="estrutura-chute">
+              <input type="text" autocomplete="off" id="palavraChutada" placeholder="Insira seu chute">
+              
+              <label for="palavraChutada">
+                <button onClick="chute()" id="chute">Chute</button>
+              </label>
+            </div>
+            
+            <div id="palavra_e_tentativas_estrutura">
+              <h2 id="palavraEscolhida"></h2>
+              <h3 id="tracos"></h3>
+              <h2 id="respostaFinal"></h2>
+            </div>
+      
+          </div> <!-- fim do 'balao-jogo' -->
+        </div> <!-- fim do third -->
+        
+      </div> <!-- fim do 'balao-background' -->
+
+      <!--status-->
+      <div class="status">
+        <h2 id="tentativas"></h2>
+        <div id="boneco"></div>
+      </div>
+      
+    </div>
+  </main>
+    
+  <!--Rodapé-->
+  <footer>
+    <p>
+      Created by <br> Matheus Ferreira <br> Talyslan Canabarro <br> Rafael Luiz 
+    </p>
+    <p>© All rights reserved, 2023</p>
+  </footer>
+    
+  <script src="scriptHG.js"></script>
+</body>
+
+</html>

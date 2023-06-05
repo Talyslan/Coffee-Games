@@ -1,0 +1,179 @@
+body {
+  background-color: #F3EFEF;
+  color: #ffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images/sextaz.webp");
+  height: 100vh;
+}
+
+.sumir {
+  display: none;
+}
+
+header nav {
+  background: rgba(31, 50, 87, 0.35);
+}
+
+
+button {
+  border: inset;
+  text-decoration: none;
+  color: white;
+  background: #1f3257;
+  padding: 15px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  transform: scale(0.98);
+  background: #1c192c;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 115px;
+}
+
+main .content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 10px;
+}
+
+main .content .balao-background {
+  background: rgba(77, 46, 255, 0.7);
+  border-radius: 10px;
+  text-align: center;
+  width: 600px;
+  height: 30rem;
+  padding: 20px 10px;
+}
+
+.first .balao-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.first .balao-info .cabeca {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.first .balao-info .cabeca h1 {
+  font-size: 30px;
+}
+
+.first .balao-info .cabeca p,
+.first .balao-info .regras ul li p {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+.first .balao-info .regras h2 {
+  font-size: 20px;
+}
+
+.second .cabeca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.second .categorias {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+.third .balao-jogo {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.third .balao-jogo .estrutura-chute {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.third .balao-jogo .estrutura-chute input {
+  border: none;
+  height: 35px;
+  border-radius: 8px;
+  max-width: 90%;
+}
+
+.third .balao-jogo input:hover {
+  background: rgba(28, 25, 44, 0.8);
+}
+
+.third .botoes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.third .botoes #mudarCategoria {
+  transform: scale(0.7);
+}
+
+
+.third .balao-jogo #palavra_e_tentativas_estrutura {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.third .balao-jogo #palavra_e_tentativas_estrutura h2 {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.content .status {
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.content .status #tentativas {
+  font-size: 15px;
+}
+
+.content .status #boneco img {
+  margin-top: 70px;
+  background: rgba(77, 46, 255, 0.7);
+  width: 210px;
+  height: 240px;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 830px) {
+  main .content {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  main .content .balao-background {
+    width: 400px;
+  }
+}

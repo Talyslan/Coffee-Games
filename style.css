@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  --roxoHome: #68528a;
+  --brancoHome: #d4d4d4;
+  --roxo: #a47bb7;
+  --branco: #d4d4d4;
+  --azul: #8bb4df;
+  --roxin: #513870;
+  --brancao: white;
+  --cinza: #2b273d;
+  --backroxo: #150a1a;
+}
+
+/*PRIMEIRA PARTE*/
+body .first {
+  background-image: url('./1.Imagens_Principais/wallpapers/cafeteria2.gif');
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100vh;
+}
+
+/*Deixando o contéudo um embaixo do outro*/
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main .content {
+  margin: 20px;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .content .balao-titulo {
+  margin-top: 250px;
+  width: 60%;
+  max-height: 500px;
+  background: var(--cinza);
+  padding: 30px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 10px 10px 20px var(--cinza);
+}
+
+main .content .balao-titulo h1 {
+  font-size: 80px;
+  font-family: 'Press Start 2P', cursive;
+  margin: 15px;
+  text-align: center;
+  color: var(--brancao);
+}
+
+main .content .balao-titulo .line {
+  width: 65%;
+  border: 3px solid var(--brancao);
+  border-radius: 30px;
+  min-width: 100px;
+  margin: 15px;
+}
+
+main .content .balao-titulo p {
+  line-height: 30px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/*SEGUNDA PARTE*/
+body .second {
+  background-image: url("1.Imagens_Principais/wallpapers/cidadezinha.gif");
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  color: white;
+  height: auto;
+}
+
+.second .divisao,
+.third .divisao,
+.fourth .divisao {
+  background: var(--cinza);
+  height: 20px;
+}
+
+.second header,
+.third header{
+  background: #ffd592;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.second header .cabeca,
+.third header .cabeca {
+  width: 100%;
+  background: var(--cinza);
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 10px 10px 20px var(--cinza);
+  transition: 0.3s ease;
+}
+
+.second header .cabeca h2,
+.third header .cabeca h2 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+  margin: 15px;
+  text-align: center;
+  color: var(--brancao);
+}
+
+.second header .line2,
+.third header .line2 {
+  width: 35%;
+  border: 3px solid var(--backroxo);
+  border-radius: 30px;
+  min-width: 100px;
+  margin: 25px 0;
+}
+ 
+.second header span,
+.third header span{
+  font-family: 'Press Start 2P', cursive;
+  color: var(--backroxo);
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.second main .jogosBotoes {
+  background-color: rgba(81, 56, 112, 0.8);
+  border-radius: 5px;
+  max-width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 150px;
+  padding: 50px;
+}
+
+.second main .jogosBotoes .gameName .botaozin #genius {
+  border-radius: 100%;
+  height: 155px;
+  width: 150px;
+}
+
+.second main .jogosBotoes .gameName {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 20px; 
+  transition: 0.3s ease;
+}
+
+.second main .jogosBotoes .gameName #jogo-da-velha {
+  width: 130px;
+}
+
+.second main .jogosBotoes .icone-game{
+  width: 155px;
+  padding: 10px;
+}
+
+.second main .jogosBotoes .gameName:hover {
+  transform: scale(1.04);
+  color: black;
+  background-color: rgb(255, 255, 255, 0.2);
+}
+
+.second main .jogosBotoes .gameName span {
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+
+.second main .jogosBotoes .gameName a {
+  width: 170px;
+  height: 170px;
+  background-color: var(--roxo);
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*TERCEIRA PARTE*/
+body .third {
+  background: var(--backroxo);
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  color: white;
+}
+
+.third main .content {
+  margin: 40px;
+}
+
+.third main .content .lado-lado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 100px;
+}
+
+.third main .content .lado-lado .right {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.third main .content .lado-lado .right .pessoa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.third main .content .lado-lado .right .pessoa .box-span {
+  background: var(--cinza);
+  padding: 10px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+}
+
+.second header .cabeca:hover,
+.third header .cabeca:hover,
+.third main .content .lado-lado .right .pessoa .box-span:hover {
+  background: var(--roxin);
+  color: var(--azul);
+}
+
+
+.third main .content .lado-lado .right .pessoa .box-span span {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  text-align: center;
+}
+
+.third main .content .lado-lado .right .pessoa a {
+  display: flex;
+  justify-content: center;
+}
+
+.third main .content .lado-lado .right .pessoa a img {
+  width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  box-shadow: 0 0 10px var(--cinza);
+}
+
+.third main .content .lado-lado .right .pessoa p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  text-align: justify;
+  line-height: 25px;
+  max-width: 400px;
+}
+
+.third main .content .lado-lado .left .mini-balao {
+  background: var(--cinza);
+  max-width: 600px;
+  max-height: 300px;
+  padding: 40px;
+  border-radius: 30px;
+}
+
+.third main .content .lado-lado .left .mini-balao p {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 12px;
+  text-align: justify;
+  line-height: 25px;
+}
+
+/*QUARTA PARTE*/
+body .fourth {
+  background: var(--backroxo);
+  background-position: center;
+  background-repeat: no-repeat; 
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+
+.fourth header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fourth header h3 {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 25px;
+  margin: 15px;
+  text-align: center;
+  color: var(--brancao);
+}
+
+.fourth address {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 50px;
+  gap: 40px;
+}
+
+.fourth address .links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.fourth address .links a {
+  text-decoration: none;
+  padding: 10px;
+  color: var(--brancao);
+}
+
+.fourth address .links a img {
+  width: 35px;
+  height: 35px;
+  border-radius: 10px;
+  padding: 3px;
+  transition: 0.3s ease;
+}
+
+.fourth address .links a img:hover {
+  transform: scale(1.05);
+  background-color: #363535;
+}
+
+.fourth span {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 10px;
+  text-align: center;
+}
+
+/* MEDIA QUERIE */
+@media only screen and (max-width: 1220px) {
+
+  body .first,
+  body .second {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 830px) {
+  main .content .balao-titulo h1 {
+    font-size: 55px;
+  }
+  
+  .first main .content .balao-titulo p
+  .second header span,
+  .third header span {
+    font-size: 10px;
+  }
+
+  .second main .jogosBotoes .gameName span {
+    font-size: 15px;
+  }
+  
+  .second header .cabeca h2,
+  .third header .cabeca h2 {
+    font-size: 35px;
+  }
+
+  .third main .content .lado-lado .right {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  main .content .balao-titulo h1 {
+    font-size: 40px;
+  }
+
+  .first main .content .balao-titulo p
+  .second header span,
+  .third header span {
+    font-size: 8px;
+  }
+
+}
